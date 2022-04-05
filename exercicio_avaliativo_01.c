@@ -5,7 +5,13 @@
 int main()
 {
     
-    char palavra_entrada[51] = "internet da oi";
+    char palavra_entrada[51];
+    
+    printf("Digite uma palavra: ");
+    //scanf("%s", palavra_entrada);
+    fgets(palavra_entrada, 51, stdin);
+    
+    printf("Palavra armazenada: %s", palavra_entrada);
     
     for(int i = 0; palavra_entrada[i] != '\0'; i++)
     {
@@ -113,14 +119,13 @@ int main()
         {
             printf("#9=4\n");
         }
-        else if(palavra_entrada[i] = ' ')
+        else if(palavra_entrada[i] == ' ')
         {
             printf("#0=1\n");
         }
         else
         {
-            printf("Caracter nao reconhecido!");
+            
         }
     }
-    
 }
