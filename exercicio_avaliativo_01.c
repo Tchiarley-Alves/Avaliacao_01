@@ -2,17 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main()
+char palavra_entrada[51];
+
+void codificar()
 {
-    
-    char palavra_entrada[51];
-    
-    printf("Digite uma palavra: ");
-    //scanf("%s", palavra_entrada);
-    fgets(palavra_entrada, 51, stdin);
-    
-    printf("Palavra armazenada: %s", palavra_entrada);
-    
     for(int i = 0; palavra_entrada[i] != '\0'; i++)
     {
         if(palavra_entrada[i] == 'a')
@@ -128,4 +121,18 @@ int main()
             
         }
     }
+}
+
+int main()
+{
+    printf("Digite uma palavra: ");
+    
+    fgets(palavra_entrada, 51, stdin);
+    
+    printf("Palavra armazenada: %s \n", palavra_entrada);
+    printf("Palavra codificada para: \n");
+    
+    codificar();
+    
+    return 0;
 }
